@@ -1,0 +1,8 @@
+<launch>
+    <rosparam command="load" file="$(find homework2)/config/waypoint.yaml"/>
+    <node pkg="turtlesim" type="turtlesim_node" name="turtlesim1" output="screen"/>
+    <node pkg="homework2" type="setup.py" name="draw_node" output="screen"/>
+    <node pkg="homework2" type="TempPub.py" name="follow_node" output="screen"/>
+    <node pkg="homework2" type="TempSub.py" name="translate_node" output="screen"/>
+
+</launch>
